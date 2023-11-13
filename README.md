@@ -19,12 +19,12 @@ The features and dataset structure could download and placed the same as [AVCA](
 
 ## Evaluation
 ### Dowloading pre-trained models
-[Here](https://drive.google.com/file/d/1HK9_dwysfQv56smXYK4lRA7dvSKpE_DE/view?usp=sharing), you can download our trained AVMST models and baselines which are located in `pretrain_model.zip`
+[Here](https://drive.google.com/file/d/1HK9_dwysfQv56smXYK4lRA7dvSKpE_DE/view?usp=sharing), you can download our trained MSTR models and baselines which are located in `pretrain_model.zip`
 Put the content of `pretrain_model.zip` in the `runs/` folder.
 ### Test on three benchmark datasets
-Here is an example for evaluating AVMST on Vggsound-GZSL using SeLaVi features.
+Here is an example for evaluating MSTR on Vggsound-GZSL using SeLaVi features.
 ``` 
-python get_evaluation.py --load_path_stage_A runs/attention_ucf_vggsound_main --load_path_stage_B runs/attention_vggsound_all_main  --dataset_name VGGSound --AVMST 
+python get_evaluation.py --load_path_stage_A runs/attention_ucf_vggsound_main --load_path_stage_B runs/attention_vggsound_all_main  --dataset_name VGGSound --MSTR 
 ```
 
 ## Results 
