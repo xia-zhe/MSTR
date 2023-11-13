@@ -17,7 +17,7 @@ import src.model_gen
 import numpy as np
 from src.dataset import ActivityNetDataset, AudioSetZSLDataset, ContrastiveDataset, VGGSoundDataset, UCFDataset
 from src.metrics import DetailedLosses, MeanClassAccuracy, PercentOverlappingClasses, TargetDifficulty
-from src.model_improvements import AVCA
+from src.model_improvements import MSTR
 from src.sampler import SamplerFactory
 from src.train import train
 from src.utils import fix_seeds, setup_experiment
