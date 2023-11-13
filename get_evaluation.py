@@ -6,7 +6,7 @@ import torch
 from src.args import args_eval
 from src.dataset import ActivityNetDataset, AudioSetZSLDataset, VGGSoundDataset, UCFDataset
 from src.model import AVGZSLNet, DeviseModel, APN, CJME
-from src.model_improvements import AVCA
+from src.model_improvements import MSTR
 from src.utils_improvements import get_model_params
 from src.test import test
 from src.utils import fix_seeds, load_args, load_model_parameters, setup_evaluation, load_model_weights
@@ -70,14 +70,14 @@ def get_evaluation():
     else:
         raise NotImplementedError()
 
-    if args.AVCA==True:
+    if args.MSTR==True:
         model_params = get_model_params(config.lr, config.first_additional_triplet, config.second_additional_triplet, \
                                         config.reg_loss, config.additional_triplets_loss, config.embedding_dropout, \
                                         config.decoder_dropout, config.additional_dropout,
                                         config.embeddings_hidden_size, \
                                         config.decoder_hidden_size, config.depth_transformer, config.momentum)
 
-    if  args.ale==False and args.sje==False and args.devise==False and args.apn==False and args.cjme==False and args.AVCA==False:
+    if  args.ale==False and args.sje==False and args.devise==False and args.apn==False and args.cjme==False and args.MSTR==False:
         model_A = AVGZSLNet(config)
     elif args.ale==True or args.sje==True or args.devise==True:
         model_A=DeviseModel(config)
@@ -85,8 +85,8 @@ def get_evaluation():
         model_A=APN(config)
     elif args.cjme==True:
         model_A=CJME(config)
-    elif args.AVCA==True:
-        model_A = AVCA(params_model=model_params, input_size_audio=config.input_size_audio,input_size_video=config.input_size_video)
+    elif args.MSTR==True:
+        model_A = MSTR(params_model=model_params, input_size_audio=config.input_size_audio,input_size_video=config.input_size_video)
 
     logger.info(model_A)
 
@@ -111,7 +111,7 @@ def get_evaluation():
         device=args.device,
         distance_fn=config.distance_fn,
         devise_model=args.ale or args.sje or args.devise,
-        new_model_attention=config.AVCA,
+        new_model_attention=config.MSTR,
         apn=args.apn,
         args=config
     )
