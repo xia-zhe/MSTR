@@ -41,7 +41,7 @@ python get_evaluation.py --load_path_stage_A runs/attention_ucf_vggsound_main --
 | AVCA               |    6.31                |    27.15        |   12.13          |
 | TCaF               |    7.33                |    31.72        |   10.71          |
 | Hyper_alignment    |    7.27                |    27.19        |   12.46          |
-| MSTR               |    7.83                |    32.43        |   13.21          |
+| MSTR               |  **7.83**              |  **32.43**      | **13.21**        |
 
 
 ## Project Structure
