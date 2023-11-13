@@ -2,11 +2,13 @@
 ## Multi-Modal Spiking Tensor Regression Network for Audio-Visual Zero-Shot Learning
 Zhe Yang, Wenrui Li, Guanghui Cheng, Jinxiu Hou.  
 The code is based on [AVCA](https://github.com/ExplainableML/AVCA-GZSL) and tested on Ubuntu 20.04 with torch 2.0.1.
+
 ###Installing tensorly
 Simply run, in your terminal:
 ```
 pip install -U tensorly
 ```
+
 ### Inportant
 The version of [spikingjelly](https://spikingjelly.readthedocs.io/zh_CN/latest/index.html) we used is 0.0.0.0.14.
 
