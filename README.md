@@ -26,6 +26,24 @@ Here is an example for evaluating AVMST on Vggsound-GZSL using SeLaVi features.
 ``` 
 python get_evaluation.py --load_path_stage_A runs/attention_ucf_vggsound_main --load_path_stage_B runs/attention_vggsound_all_main  --dataset_name VGGSound --AVMST 
 ```
+
+## Results 
+### GZSL performance on VGGSound-GZSL, UCF-GZSL, ActivityNet-GZSL
+
+| Method             | VGGSound-GZSL          | UCF-GZSL        | ActivityNet-GZSL |
+|--------------------|------------------------|-----------------|------------------|
+| APN                |    5.11                |    20.61        |   7.27           |
+| VAEGAN             |    1.77                |    11.37        |   2.87           |
+| SJE                |    2.15                |    26.50        |   5.57           |
+| DEVISE             |    2.08                |    23.56        |   4.91           |
+| CJME               |    6.17                |    12.48        |   5.12           |
+| AVGZSLNET          |    5.83                |    18.05        |   6.44           |
+| AVCA               |    6.31                |    27.15        |   12.13          |
+| TCaF               |    7.33                |    31.72        |   10.71          |
+| Hyper_alignment    |    7.27                |    27.19        |   12.46          |
+| MSTR               |    7.83                |    32.43        |   13.21          |
+
+
 ## Project Structure
 ```audioset_vggish_tensorflow_to_pytorch``` - Contains the code which is used to obtain the audio features using VGGish.
 
