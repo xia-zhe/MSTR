@@ -290,7 +290,7 @@ def args_main(*args, **kwargs):
     )
 
     parser.add_argument(
-        "--AVCA",
+        "--MSTR",
         help="Flag to set the attention to the new model",
         action="store_true"
 
@@ -499,7 +499,7 @@ def args_eval():
     )
 
     parser.add_argument(
-        "--AVCA",
+        "--MSTR",
         help="Flag to set the attention to the new model",
         action="store_true"
 

@@ -197,9 +197,9 @@ class SNNBranch(nn.Module):
 
 
 
-class AVCA(nn.Module):
+class MSTR(nn.Module):
     def __init__(self, params_model, input_size_audio, input_size_video):
-        super(AVCA, self).__init__()
+        super(MSTR, self).__init__()
 
         print('Initializing model variables...', end='')
         # Dimension of embedding
@@ -280,7 +280,7 @@ class AVCA(nn.Module):
 
         self.pos_emb1D = torch.nn.Parameter(torch.randn(2, 300))
         self.pos_emb1D_t = torch.nn.Parameter(torch.randn(2, 300))
-        self.T = 9
+        self.T = 10
         # Optimizers
         print('Defining optimizers...', end='')
         self.lr = params_model['lr']
