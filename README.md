@@ -3,7 +3,7 @@
 Zhe Yang, Wenrui Li, Guanghui Cheng, Jinxiu Hou.  
 The code is based on [AVCA](https://github.com/ExplainableML/AVCA-GZSL) and tested on Ubuntu 20.04 with torch 2.0.1.
 
-###Installing tensorly
+### Installing tensorly
 Simply run, in your terminal:
 ```
 pip install -U tensorly
