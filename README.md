@@ -1,9 +1,16 @@
 # MSTR
 ## Multi-Modal Spiking Tensor Regression Network for Audio-Visual Zero-Shot Learning
 Zhe Yang, Wenrui Li, Guanghui Cheng, Jinxiu Hou.  
-The code is based on [AVCA](https://github.com/ExplainableML/AVCA-GZSL) and tested on Ubuntu 20.04 with torch 1.13.
+The code is based on [AVCA](https://github.com/ExplainableML/AVCA-GZSL) and tested on Ubuntu 20.04 with torch 2.0.1.
+###Installing tensorly
+Simply run, in your terminal:
+```
+pip install -U tensorly
+```
 ### Inportant
-The version of [spikingjelly](https://spikingjelly.readthedocs.io/zh_CN/latest/index.html) we used is 0.0.0.0.12. Installing different versions can cause performance differences.
+The version of [spikingjelly](https://spikingjelly.readthedocs.io/zh_CN/latest/index.html) we used is 0.0.0.0.14.
+
+Installing different versions can cause performance differences.
 ### Downloading features
 The features and dataset structure could download and placed the same as [AVCA](https://github.com/ExplainableML/AVCA-GZSL).
 ## Evaluation
