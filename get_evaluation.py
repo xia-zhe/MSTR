@@ -6,7 +6,7 @@ import torch
 from src.args import args_eval
 from src.dataset import ActivityNetDataset, AudioSetZSLDataset, VGGSoundDataset, UCFDataset
 from src.model import AVGZSLNet, DeviseModel, APN, CJME
-from src.model_improvements import MSTR
+from src.model_improvements import AVCA
 from src.utils_improvements import get_model_params
 from src.test import test
 from src.utils import fix_seeds, load_args, load_model_parameters, setup_evaluation, load_model_weights
@@ -86,7 +86,7 @@ def get_evaluation():
     elif args.cjme==True:
         model_A=CJME(config)
     elif args.MSTR==True:
-        model_A = MSTR(params_model=model_params, input_size_audio=config.input_size_audio,input_size_video=config.input_size_video)
+        model_A = AVCA(params_model=model_params, input_size_audio=config.input_size_audio,input_size_video=config.input_size_video)
 
     logger.info(model_A)
 
@@ -111,7 +111,7 @@ def get_evaluation():
         device=args.device,
         distance_fn=config.distance_fn,
         devise_model=args.ale or args.sje or args.devise,
-        new_model_attention=config.MSTR,
+        new_model_attention=config.AVCA,
         apn=args.apn,
         args=config
     )
