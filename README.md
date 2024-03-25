@@ -1,6 +1,6 @@
 # MSTR
 ## Multi-Modal Spiking Tensor Regression Network for Audio-Visual Zero-Shot Learning
-Zhe Yang, Wenrui Li, Guanghui Cheng, Jinxiu Hou.  
+Zhe Yang, Wenrui Li, Jinxiu Hou, Guanghui Cheng. 
 The code is based on [AVCA](https://github.com/ExplainableML/AVCA-GZSL) and tested on Ubuntu 20.04 with torch 2.0.1.
 
 ### Installing tensorly
